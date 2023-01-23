@@ -1,6 +1,7 @@
 package ua.com.shop.course_shop_np_371_372_2023.entity;
 
 
+import jakarta.persistence.*;
 import lombok.*;
 
 @Setter
@@ -9,9 +10,19 @@ import lombok.*;
 @AllArgsConstructor
 @ToString
 
+@Entity
+@Table(name = "attribute_has_product")
 public class AttributeHasProduct {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @ManyToOne
+    @JoinColumn(name = "attribute_id")
     private Attribute attribute;
-    private Product product;
+
+    @ManyToOne
+    @JoinColumn(name = "productes_id")
+    private Product productes;
 }

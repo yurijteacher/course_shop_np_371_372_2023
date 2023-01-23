@@ -1,5 +1,6 @@
 package ua.com.shop.course_shop_np_371_372_2023.entity;
 
+import jakarta.persistence.*;
 import lombok.*;
 
 import java.math.BigDecimal;
@@ -12,8 +13,13 @@ import java.util.List;
 @AllArgsConstructor
 @ToString
 
+
+@Entity
+@Table(name = "products")
 public class Product {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
 
@@ -23,10 +29,13 @@ public class Product {
 
     private String image;
 
-    private Category category;
+    @ManyToOne
+    @JoinColumn(name = "category_id")
+    private Category categories;
 
-    private List<ProductHasOrder> productHasOrderList;
-
+    @OneToMany(mappedBy = "product")
+    private List<ProductHasOrder> productHasOrders;
+    @OneToMany(mappedBy = "productes")
     private List<AttributeHasProduct> attributeHasProductList;
 
 }

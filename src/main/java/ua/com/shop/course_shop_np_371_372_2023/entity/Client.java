@@ -1,6 +1,7 @@
 package ua.com.shop.course_shop_np_371_372_2023.entity;
 
 
+import jakarta.persistence.*;
 import lombok.*;
 
 import java.util.List;
@@ -11,8 +12,13 @@ import java.util.List;
 @AllArgsConstructor
 @ToString
 
+
+@Entity
+@Table(name = "clients")
 public class Client {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String firstName;
 
@@ -24,10 +30,17 @@ public class Client {
 
     private String email;
 
+
+    @OneToOne
+    @MapKey
+    @MapsId
+    @JoinColumn(name = "id")
     private Users user;
 
+    @OneToMany(mappedBy ="clientes")
     private List<Address> addressList;
 
-    private List<Order> orders;
+    @OneToMany(mappedBy = "client")
+    private List<Order> orderList;
 
 }
