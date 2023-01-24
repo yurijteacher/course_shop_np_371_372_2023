@@ -7,6 +7,8 @@
 <body>
 
 <h1>${hello}</h1>
+<a href="/category">go to category</a>
+
 
 </body>
 </html>
