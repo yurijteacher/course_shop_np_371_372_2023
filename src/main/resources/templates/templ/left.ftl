@@ -1,7 +1,11 @@
-<ul class="list-group">
-  <li class="list-group-item active" aria-current="true">An active item</li>
-  <li class="list-group-item">A second item</li>
-  <li class="list-group-item">A third item</li>
-  <li class="list-group-item">A fourth item</li>
-  <li class="list-group-item">And a fifth one</li>
-</ul>
+
+<div class="list-group">
+  <h2>Shop left menu</h2>
+  <button type="button" class="list-group-item list-group-item-action active" aria-current="true">
+    The current button
+  </button>
+  <button type="button" class="list-group-item list-group-item-action">A second button item</button>
+  <button type="button" class="list-group-item list-group-item-action">A third button item</button>
+  <button type="button" class="list-group-item list-group-item-action">A fourth button item</button>
+  <button type="button" class="list-group-item list-group-item-action" disabled>A disabled button item</button>
+</div>
