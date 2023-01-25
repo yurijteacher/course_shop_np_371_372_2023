@@ -21,43 +21,23 @@
   </ul>
 </nav>
 
-<div class="row row-cols-2 row-cols-md-4 g-4">
+<div class="row row-cols-2 row-cols-md-2 g-4">
+
+  <#if allCategory??>
+  <#list allCategory as category>
   <div class="col">
     <div class="card">
-      <img src="/static/images/category/car.jpg" class="card-img-top" alt="...">
+      <a href="/category/${category.id}">
+      <img src="${category.image}" class="card-img-top" alt="${category.name}">
+      </a>
       <div class="card-body">
-        <h5 class="card-title">Cart</h5>
-        <p class="card-text">Tsadhsa sghad sa dashg</p>
+        <h5 class="card-title">${category.name}</h5>
+        <p class="card-text">${category.description}</p>
       </div>
     </div>
   </div>
-  <div class="col">
-    <div class="card">
-      <img src="/static/images/category/car.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Beer</h5>
-        <p class="card-text">Tsadhsa sghad sa dashgsads sad</p>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <img src="/static/images/category/car.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Apple</h5>
-        <p class="card-text">sad ghsadggsa</p>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <img src="/static/images/category/car.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-          additional content. This content is a longer.</p>
-      </div>
-    </div>
-  </div>
+  </#list>
+  </#if>
+
 </div>
 </@p.pages>

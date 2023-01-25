@@ -19,12 +19,11 @@ public class CategoryController {
         this.categoryService = categoryService;
     }
 
-    @GetMapping("/category")
-    public String getPageCategory(
-    ){
+    @GetMapping("/")
+    public String getPageCategory(Model model){
 
-       // List<Category> categoryList = categoryService.getAllCategory();
-       // model.addAttribute("allCategory", categoryList);
+        List<Category> categoryList = categoryService.getAllCategory();
+        model.addAttribute("allCategory", categoryList);
 
         return "category";
     }
