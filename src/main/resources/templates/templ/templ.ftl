@@ -26,7 +26,7 @@
             </div>
 
 
-            <div class="row">
+            <div class="row align-items-end">
                 <div class="col">
                     <#include "footer.ftl">
                 </div>

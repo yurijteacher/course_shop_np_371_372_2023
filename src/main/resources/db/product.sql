@@ -1,6 +1,6 @@
-INSERT INTO `course_shop_np_371_372_2023`.`products` (`description`, `image`, `name`, `price`, `category_id`) VALUES ('asd asd sad sad sad', '/static/images/category/car.jpg', 'bmw-5', '1100', '1');
-INSERT INTO `course_shop_np_371_372_2023`.`products` (`description`, `image`, `name`, `price`, `category_id`) VALUES ('sdf asd sad sad sad', '/static/images/category/car.jpg', 'bmw-3', '1200', '1');
-INSERT INTO `course_shop_np_371_372_2023`.`products` (`description`, `image`, `name`, `price`, `category_id`) VALUES ('dfg asd sad sad sad', '/static/images/category/car.jpg', 'bmw-4', '1300', '1');
-INSERT INTO `course_shop_np_371_372_2023`.`products` (`description`, `image`, `name`, `price`, `category_id`) VALUES ('ghj asd sad sad sad', '/static/images/category/car.jpg', 'bmw-5', '1400', '1');
-INSERT INTO `course_shop_np_371_372_2023`.`products` (`description`, `image`, `name`, `price`, `category_id`) VALUES ('hjk asd sad sad sad', '/static/images/category/car.jpg', 'bmw-6', '1500', '1');
-INSERT INTO `course_shop_np_371_372_2023`.`products` (`description`, `image`, `name`, `price`, `category_id`) VALUES ('jkl asd sad sad sad', '/static/images/category/car.jpg', 'bmw-7', '4100', '1');
+INSERT INTO `course_shop_np_371_372_2023`.`products` (`description`, `image`, `name`, `price`, `category_id`) VALUES ('asd asd sad sad sad', '/static/images/category/car1.jpg', 'bmw-5', '1100', '1');
+INSERT INTO `course_shop_np_371_372_2023`.`products` (`description`, `image`, `name`, `price`, `category_id`) VALUES ('sdf asd sad sad sad', '/static/images/category/car1.jpg', 'bmw-3', '1200', '1');
+INSERT INTO `course_shop_np_371_372_2023`.`products` (`description`, `image`, `name`, `price`, `category_id`) VALUES ('dfg asd sad sad sad', '/static/images/category/car1.jpg', 'bmw-4', '1300', '1');
+INSERT INTO `course_shop_np_371_372_2023`.`products` (`description`, `image`, `name`, `price`, `category_id`) VALUES ('ghj asd sad sad sad', '/static/images/category/car1.jpg', 'bmw-5', '1400', '1');
+INSERT INTO `course_shop_np_371_372_2023`.`products` (`description`, `image`, `name`, `price`, `category_id`) VALUES ('hjk asd sad sad sad', '/static/images/category/car1.jpg', 'bmw-6', '1500', '1');
+INSERT INTO `course_shop_np_371_372_2023`.`products` (`description`, `image`, `name`, `price`, `category_id`) VALUES ('jkl asd sad sad sad', '/static/images/category/car1.jpg', 'bmw-7', '4100', '1');

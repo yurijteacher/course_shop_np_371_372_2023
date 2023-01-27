@@ -72,18 +72,15 @@ public class Cart {
     public synchronized double getTotalVal(){
 
         totalValue = 0;
-
         for (ItemCart el : cart) {
             totalValue += el.getQuantity()*el.getProduct().getPrice().doubleValue();
         }
-
         return totalValue;
     }
 
 
     public  synchronized int getSumItemCart(){
         int a = 0;
-
         for (ItemCart el : cart) {
             a++;
         }

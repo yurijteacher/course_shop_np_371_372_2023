@@ -4,7 +4,6 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.stereotype.Repository;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -33,8 +32,8 @@ private final ProductService productService;
         List<Product> productList = productService.getProductsByCategory(category);
         model.addAttribute("allProductByCategory", productList);
 
-       String name = (!productList.isEmpty()) ? category.getName() : " ";
-       model.addAttribute("category", name);
+        String name = (!productList.isEmpty()) ? category.getName() : " ";
+        model.addAttribute("category", name);
 
         return "productByCategory";
     }
@@ -77,4 +76,69 @@ private final ProductService productService;
 
         return "cart";
     }
+
+    @PostMapping("/updateItemCart")
+    public String updateItemCart(@RequestParam(name = "id") Product product,
+                                @RequestParam(name = "quantity") int quantity,
+                                HttpServletRequest request
+                                 ){
+
+        HttpSession session = request.getSession();
+        Cart cart = (Cart) session.getAttribute("cart");
+
+        if(cart==null) cart = new Cart();
+
+        cart.updateItemCart(product, quantity);
+
+        session.setAttribute("cart", cart);
+
+        return "redirect:/cart";
+    }
+
+
+    @PostMapping("/deleteItemCart")
+    public String deleteItemFromCart(@RequestParam(name = "id") Product product,
+                                     HttpServletRequest request){
+
+        HttpSession session = request.getSession();
+        Cart cart = (Cart) session.getAttribute("cart");
+
+        if(cart==null) cart = new Cart();
+
+        cart.deleteItemFromCart(product);
+
+        session.setAttribute("cart", cart);
+
+        return "redirect:/cart";
+    }
+
+    @PostMapping("/deleteItemsCart")
+    public String deleteItemsFromCart(HttpServletRequest req){
+
+        HttpSession session = req.getSession();
+
+        Cart cart = (Cart) session.getAttribute("cart");
+        if(cart==null) cart = new Cart();
+
+        cart.deleteAllItemFromCart();
+
+        session.setAttribute("cart", cart);
+
+        return "redirect:/cart";
+    }
+
+    @PostMapping("/login")
+    public String getPageOrder(){
+
+        // return "redirect:/registration";
+
+        return "redirect:/order";
+    }
+
+
+    @GetMapping("/login")
+    public String getPageAuth(){
+        return "login";
+    }
+
 }
