@@ -127,18 +127,6 @@ private final ProductService productService;
         return "redirect:/cart";
     }
 
-    @PostMapping("/login")
-    public String getPageOrder(){
 
-        // return "redirect:/registration";
-
-        return "redirect:/order";
-    }
-
-
-    @GetMapping("/login")
-    public String getPageAuth(){
-        return "login";
-    }
 
 }

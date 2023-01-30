@@ -56,8 +56,8 @@
 
     <p></p>
     <h2>go to Form Order</h2>
-    <form action="/login" method="post">
-        <button type="submit"> delete All Item Cart </button>
+    <form action="/login" method="get">
+        <button type="submit"> go to Auth </button>
     </form>
 
     <p> </p>

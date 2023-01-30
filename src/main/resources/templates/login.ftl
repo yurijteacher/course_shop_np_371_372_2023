@@ -10,7 +10,6 @@
             <div class="mb-3">
 
                 <fieldset>
-
                     <label for="username">Username</label>
                     <input type="text" name="username" id="username" placeholder="user">
 
