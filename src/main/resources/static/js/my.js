@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(document).ready(() => {
 
 // $('.container-fluid')
 // $('#id_')
@@ -23,7 +23,8 @@ $(document).ready(function () {
 
         count = count < 1 ? 1 : count;
 
-        $(this).parent().find('input').val(count);
+        input.val(count);
+        input.change();
 
         // $(this).parent().find('.my_text').text('!')
 
@@ -35,10 +36,12 @@ $(document).ready(function () {
 
         var count = parseInt(input.val()) + 1;
 
-        $(this).parent().find('input').val(count);
+        // $(this).parent().find('input').val(count);
+
+        input.val(count);
+        input.change();
 
         return false;
     });
-
 
 });
