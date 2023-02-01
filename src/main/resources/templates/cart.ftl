@@ -26,7 +26,13 @@
             <td><img src="${item.product.image}" alt="${item.product.name}" height="40px"></td>
             <td>${item.product.name}</td>
 <#--            <td>${item.product.description}</td>-->
-            <td><input type="number" name="quantity" value="${item.quantity}" size="5"></td>
+            <td>
+                <div>
+                <button class="minus btn btn-success"> - </button>
+                <input type="text" id="quantity" name="quantity" value="${item.quantity}" size="3">
+                <button class="plus btn btn-success"> - </button>
+                </div>
+            </td>
             <td>${item.product.price}</td>
             <td>${item.product.price*item.quantity}</td>
             <td>

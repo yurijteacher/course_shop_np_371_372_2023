@@ -19,3 +19,15 @@
 .row div:nth-child(even){
     background: #1ca0b7;
 }
+
+#name{
+    background: #1ca0b7;
+}
+
+a {
+    border: 1px #3c5028;
+}
+
+div {
+    border: 1px #3c5028;
+}
