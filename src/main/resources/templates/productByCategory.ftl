@@ -40,9 +40,9 @@
                             <h5 class="card-title">price: <a>${product.price}</a></h5>
 
                             <div>
-                            <button class="minus btn btn-success"> - </button>
+                                <button class="minus btn btn-success"> - </button>
                                 <input type="text" name="quantity" value="1" size="3">
-                            <button class="plus btn btn-success"> + </button>
+                                <button class="plus btn btn-success"> + </button>
                                 <p class="my_text"> </p>
                             </div>
 

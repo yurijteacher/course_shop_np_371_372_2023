@@ -1,17 +1,17 @@
 $(document).ready(() => {
 
+// за назвою класа
 // $('.container-fluid')
+// за ідентифікатором
 // $('#id_')
-// $('search-input')
+// за тегами
+// $('input')
+    // $('')
 
     $('.minus').click(function () {
 
-        // var text = $('#my_text').text();
-        // $('#my_text').text('abc abc');
-
-
-
-        var input = $(this).parent().find('input');
+        // text();
+        var input =  $(this).parent().find('input');
 
         var count = parseInt(input.val()) - 1;
 
@@ -26,20 +26,25 @@ $(document).ready(() => {
         input.val(count);
         input.change();
 
-        // $(this).parent().find('.my_text').text('!')
+        // var text = $('.my_text').text();
+        // $('.my_text').text('abc abc');
+        // $(this).parent().find('.my_text').text('minus');
 
         return false;
     });
 
-    $('.plus').click(function () {
-        var input = $(this).parent().find('input');
+    $('.plus').click(
+        function () {
 
-        var count = parseInt(input.val()) + 1;
+            var input = $(this).parent().find('input');
+            var count = parseInt(input.val()) + 1;
 
         // $(this).parent().find('input').val(count);
 
         input.val(count);
         input.change();
+
+        $(this).parent().find('.my_text').text('plus');
 
         return false;
     });

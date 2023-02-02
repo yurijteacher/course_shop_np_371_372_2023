@@ -19,7 +19,7 @@ private final ProductRepository productRepository;
         this.productRepository = productRepository;
     }
 
-    @Cacheable(cacheNames = "prod", key = "#category.getId()")
+     @Cacheable(cacheNames = "prod", key = "#category.getId()")
     public List<Product> getProductsByCategory(Category category){
         return productRepository.findAllByCategories(category);
     }
