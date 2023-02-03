@@ -31,7 +31,6 @@ public class CategoryService {
         return categoryRepository.findAll();
     }
 
-
     @Cacheable(cacheNames = "cate", key = "#pageable.pageNumber")
     public Page<Category> getAllPageCategory(Pageable pageable){
        return categoryRepository.findAll(pageable);

@@ -3,6 +3,9 @@ package ua.com.shop.course_shop_np_371_372_2023.controller;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -36,6 +39,19 @@ private final ProductService productService;
         model.addAttribute("category", name);
 
         return "productByCategory";
+    }
+
+    @GetMapping("/productbycategory/{id}")
+    public String getPageProductsByCategory(
+            @PathVariable(name = "id") Category category,
+            @PageableDefault(sort = {"price"}, direction = Sort.Direction.ASC, size = 4) Pageable pageable,
+            Model model){
+
+        model.addAttribute("url", "/productbycategory/"+category.getId());
+        model.addAttribute("page", productService.getPageProductByCategory(category, pageable));
+
+
+        return "productsbycategory";
     }
 
 

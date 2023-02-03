@@ -2,7 +2,7 @@
 
 <nav aria-label="Page navigation example">
     <ul class="pagination">
-        <li class="page-item">
+        <li class="page-item disabled">
             <a class="page-link" href="#" aria-label="Previous" tabindex="-1">
                 <span aria-hidden="true">&laquo;</span>
             </a>

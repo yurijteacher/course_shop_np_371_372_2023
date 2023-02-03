@@ -12,7 +12,7 @@
         <#list page.content as category>
             <div class="col">
                 <div class="card">
-                    <a href="../category/${category.id}">
+                    <a href="/productbycategory/${category.id}">
                         <img src="${category.image}" class="card-img-top" alt="${category.name}">
                     </a>
                     <div class="card-body">
